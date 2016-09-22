@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="customerForm" type="com.alumni.struts.form.CustomerForm" />
+    <form-bean name="personnelForm" type="com.alumni.struts.form.PersonnelForm" />
+    <form-bean name="sendMailForm" type="com.alumni.struts.form.SendMailForm" />
+    <form-bean name="equipmentForm" type="com.alumni.struts.form.EquipmentForm" />
+    <form-bean name="borrowForm" type="com.alumni.struts.form.BorrowForm" />
+    <form-bean name="reverseForm" type="com.alumni.struts.form.ReverseForm" />
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="customerForm"
+      input="/customer/customer_add.jsp"
+      name="customerForm"
+      path="/customer"
+      scope="request"
+      type="com.alumni.struts.action.CustomerAction" validate="true">
+      <forward name="customerQuery" path="/customer/customer.jsp" />
+      <forward name="customerAdd" path="/customer/customer_ok.jsp?para=1" />
+      <forward name="customerQueryModify" path="/customer/customer_modify.jsp" />
+      <forward name="customerModify" path="/customer/customer_ok.jsp?para=2" />
+      <forward name="customerDel" path="/customer/customer_ok.jsp?para=3" />
+      <forward name="error" path="/error.jsp" />
+    </action>
+    <action
+      attribute="personnelForm"
+      name="personnelForm"
+      input="/personnel/personnel_add.jsp"
+      path="/personnel"
+      scope="request"
+      type="com.alumni.struts.action.PersonnelAction" validate="true">
+      <forward name="personnelQuery" path="/personnel/personnel.jsp" />
+      <forward name="personnelAdd" path="/personnel/personnel_ok.jsp?para=1" />
+      <forward name="personnelQueryModify" path="/personnel/personnel_modify.jsp" />
+      <forward name="personnelQueryModifyM" path="/personnel/personnel_update.jsp" />
+      <forward name="personnelModify" path="/personnel/personnel_ok.jsp?para=2" />
+      <forward name="personnelDel" path="/personnel/personnel_ok.jsp?para=3" />
+      <forward name="error" path="/error.jsp" />
+    </action>
+    <action
+      attribute="sendMailForm"
+      input="/mail/sendMail.jsp"
+      name="sendMailForm"
+      path="/sendMail"
+      scope="request"
+      type="com.alumni.struts.action.SendMailAction" validate="true">
+      <forward name="addMail" path="/mail/sendMail.jsp" />     
+      <forward name="sendMail" path="/mail/sendMail_ok.jsp" />
+      <forward name="error" path="/error.jsp" />
+    </action>
+    <action
+      attribute="equipmentForm"
+      name="equipmentForm"
+      path="/equipment"
+      scope="request"
+      type="com.alumni.struts.action.EquipmentAction" validate="true">
+      <forward name="equipmentQuery" path="/equipment/equipment.jsp" />
+      <forward name="equipmentAdd" path="/equipment/equipment_ok.jsp?para=1" />
+      <forward name="equipmentQueryModify" path="/equipment/equipment_modify.jsp" />
+      <forward name="equipmentModify" path="/equipment/equipment_ok.jsp?para=2" />
+      <forward name="equipmentDel" path="/equipment/equipment_ok.jsp?para=3" />
+      <forward name="error" path="/error.jsp" />
+    </action>
+    <action
+      attribute="borrowForm"
+      input="/borrow/borrow_add.jsp"
+      name="borrowForm"
+      path="/borrow"
+      scope="request"
+      type="com.alumni.struts.action.BorrowAction" validate="true">
+       <forward name="borrowQuery" path="/borrow/borrow.jsp" />
+      <forward name="borrowAdd" path="/borrow/borrow_ok.jsp?para=1" />
+      <forward name="borrowQueryModify" path="/borrow/borrow_modify.jsp" />
+      <forward name="borrowModify" path="/borrow/borrow_ok.jsp?para=2" />
+      <forward name="borrowDel" path="/borrow/borrow_ok.jsp?para=3" />
+      <forward name="borrowReturn" path="/borrow/borrow_ok.jsp?para=4" />
+      <forward name="borrowRestore" path="/borrow/borrow_ok.jsp?para=5" />
+      <forward name="borrowUreQuery" path="/borrow/borrow.jsp" />
+      <forward name="borrowReQuery" path="/borrow/borrow.jsp" />
+      <forward name="overdue" path="/borrow/overdue.jsp" />
+      <forward name="error" path="/error.jsp" />
+    </action>
+    
+    <action
+      attribute="reverseForm"
+      name="reverseForm"
+      path="/reverse"
+      scope="request"
+      type="com.alumni.struts.action.ReverseAction" validate="true">
+      <forward name="addReply" path="/message/reply_ok.jsp?para=1" />
+      <forward name="delReply" path="/message/reply_ok.jsp?para=2" />
+      <forward name="queryReply" path="/message/look.jsp" />
+      <forward name="error" path="/error.jsp" />
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.alumni.struts.ApplicationResources" />
+  <message-resources parameter="struts.ApplicationResources.properties" />
+</struts-config>
+

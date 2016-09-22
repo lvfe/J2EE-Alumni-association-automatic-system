@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/customer.do" location="50,50" dimension="276,104" />
+  <StrutsActivity path="/personnel.do" location="650,50" dimension="277,104" />
+  <StrutsActivity path="/sendMail.do" location="50,250" dimension="274,104" />
+  <StrutsActivity path="/equipment.do" location="1250,450" dimension="282,104" />
+  <StrutsActivity path="/borrow.do" location="1250,50" dimension="263,104" />
+  <StrutsActivity path="/reverse.do" location="1550,850" dimension="266,104" />
+  <StrutsActivity path="/error.jsp" location="350,450" dimension="87,53" />
+  <StrutsActivity path="/customer/customer_ok.jsp" location="950,850" dimension="190,53" />
+  <StrutsActivity path="/customer/customer_modify.jsp" location="50,1050" dimension="215,53" />
+  <StrutsActivity path="/customer/customer.jsp" location="650,250" dimension="170,53" />
+  <StrutsActivity path="/customer/customer_add.jsp" location="650,850" dimension="198,53" />
+  <StrutsActivity path="/personnel/personnel_ok.jsp" location="950,1050" dimension="198,53" />
+  <StrutsActivity path="/personnel/personnel.jsp" location="650,1150" dimension="178,53" />
+  <StrutsActivity path="/personnel/personnel_modify.jsp" location="50,1250" dimension="223,53" />
+  <StrutsActivity path="/personnel/personnel_add.jsp" location="350,1350" dimension="206,53" />
+  <StrutsActivity path="/mail/sendMail.jsp" location="50,450" dimension="139,53" />
+  <StrutsActivity path="/mail/sendMail_ok.jsp" location="950,1250" dimension="159,53" />
+  <StrutsActivity path="/equipment/equipment_ok.jsp" location="1250,1250" dimension="206,53" />
+  <StrutsActivity path="/equipment/equipment.jsp" location="1250,850" dimension="186,53" />
+  <StrutsActivity path="/equipment/equipment_modify.jsp" location="650,1350" dimension="231,53" />
+  <StrutsActivity path="/borrow/borrow_ok.jsp" location="950,1450" dimension="168,53" />
+  <StrutsActivity path="/borrow/borrow.jsp" location="1250,1450" dimension="148,53" />
+  <StrutsActivity path="/borrow/overdue.jsp" location="1550,1450" dimension="153,53" />
+  <StrutsActivity path="/borrow/borrow_modify.jsp" location="350,1550" dimension="193,53" />
+  <StrutsActivity path="/borrow/borrow_add.jsp" location="50,1450" dimension="176,53" />
+  <StrutsActivity path="/message/reply_ok.jsp" location="1550,1250" dimension="163,53" />
+  <StrutsActivity path="/message/look.jsp" location="1550,650" dimension="140,53" />
+  <StrutsActivity path="/personel/personnel_ok.jsp" location="350,1150" dimension="191,53" />
+  <StrutsActivity path="/form/reverse.jsp" location="1550,1050" dimension="133,53" />
+  <StrutsActivity path="/equipment/equipment_add.jsp" location="1250,650" dimension="214,53" />
+  <StrutsActivity path="/customer_ok.jsp" location="650,450" dimension="131,53" />
+  <StrutsActivity path="/customer_modify.jsp" location="950,450" dimension="156,53" />
+  <StrutsActivity path="/customer.jsp" location="50,650" dimension="111,53" />
+  <StrutsActivity path="/personnel_ok.jsp" location="350,650" dimension="135,53" />
+  <StrutsActivity path="/personnel.jsp" location="650,650" dimension="115,53" />
+  <StrutsActivity path="/personnel_modify.jsp" location="950,650" dimension="160,53" />
+  <StrutsActivity path="/sendMail.jsp" location="50,850" dimension="110,53" />
+  <StrutsActivity path="/sendMail_ok.jsp" location="350,850" dimension="130,53" />
+  <StrutsActivity path="/form/personnel.jsp" location="950,250" dimension="148,53" />
+  <StrutsActivity path="//personnel_ok.jsp" location="1250,1050" dimension="140,53" />
+  <StrutsActivity path="/personnel/personnel_update.jsp" />
+  <StrutsTransition id="/mail/sendMail.jsp,null,/sendMail.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowQueryModify,/borrow/borrow_modify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1381,50" />
+      <AbsolutePoint location="1381,-75" />
+      <AbsolutePoint location="-135,-75" />
+      <AbsolutePoint location="-135,1576" />
+      <AbsolutePoint location="350,1576" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowUreQuery,/borrow/borrow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,154" />
+      <AbsolutePoint location="1351,229" />
+      <AbsolutePoint location="30,229" />
+      <AbsolutePoint location="30,1708" />
+      <AbsolutePoint location="1354,1708" />
+      <AbsolutePoint location="1354,1503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,error,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,518" />
+      <AbsolutePoint location="393,518" />
+      <AbsolutePoint location="393,503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/customer.do,customerQueryModify,/customer/customer_modify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,72" />
+      <AbsolutePoint location="-270,72" />
+      <AbsolutePoint location="-270,1076" />
+      <AbsolutePoint location="50,1076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sendMail.do,addMail,/mail/sendMail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="119,354" />
+      <AbsolutePoint location="119,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reverse.do,queryReply,/message/look.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1620,850" />
+      <AbsolutePoint location="1620,703" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,equipmentQuery,/equipment/equipment.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1479,554" />
+      <AbsolutePoint location="1479,876" />
+      <AbsolutePoint location="1436,876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personnel/personnel_add.jsp,null,/personnel.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="556,1376" />
+      <AbsolutePoint location="601,1376" />
+      <AbsolutePoint location="601,132" />
+      <AbsolutePoint location="650,132" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,equipmentQueryModify,/equipment/equipment_modify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,458" />
+      <AbsolutePoint location="1163,458" />
+      <AbsolutePoint location="1163,1365" />
+      <AbsolutePoint location="881,1365" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,overdue,/borrow/overdue.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1513,102" />
+      <AbsolutePoint location="1861,102" />
+      <AbsolutePoint location="1861,1476" />
+      <AbsolutePoint location="1703,1476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,error,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1321,154" />
+      <AbsolutePoint location="1321,199" />
+      <AbsolutePoint location="423,199" />
+      <AbsolutePoint location="423,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowAdd,/borrow/borrow_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1381,154" />
+      <AbsolutePoint location="1381,318" />
+      <AbsolutePoint location="571,318" />
+      <AbsolutePoint location="571,1678" />
+      <AbsolutePoint location="1034,1678" />
+      <AbsolutePoint location="1034,1503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personnel.do,personnelQueryModifyM,/personnel/personnel_update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="788,102" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/customer.do,error,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,102" />
+      <AbsolutePoint location="-210,102" />
+      <AbsolutePoint location="-210,599" />
+      <AbsolutePoint location="423,599" />
+      <AbsolutePoint location="423,503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sendMail.do,error,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="324,288" />
+      <AbsolutePoint location="363,288" />
+      <AbsolutePoint location="363,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowReQuery,/borrow/borrow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1411,154" />
+      <AbsolutePoint location="1411,369" />
+      <AbsolutePoint location="339,369" />
+      <AbsolutePoint location="339,1518" />
+      <AbsolutePoint location="1324,1518" />
+      <AbsolutePoint location="1324,1503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reverse.do,addReply,/message/reply_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1698,954" />
+      <AbsolutePoint location="1698,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sendMail.do,sendMail,/mail/sendMail_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="288,354" />
+      <AbsolutePoint location="288,1276" />
+      <AbsolutePoint location="950,1276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow/borrow_add.jsp,null,/borrow.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowReturn,/borrow/borrow_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1513,132" />
+      <AbsolutePoint location="1831,132" />
+      <AbsolutePoint location="1831,1318" />
+      <AbsolutePoint location="1064,1318" />
+      <AbsolutePoint location="1064,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/customer/customer_add.jsp,null,/customer.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="835,850" />
+      <AbsolutePoint location="835,429" />
+      <AbsolutePoint location="500,429" />
+      <AbsolutePoint location="500,72" />
+      <AbsolutePoint location="326,72" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowModify,/borrow/borrow_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1441,154" />
+      <AbsolutePoint location="1441,399" />
+      <AbsolutePoint location="631,399" />
+      <AbsolutePoint location="631,1476" />
+      <AbsolutePoint location="950,1476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reverse.do,error,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,918" />
+      <AbsolutePoint location="500,918" />
+      <AbsolutePoint location="500,476" />
+      <AbsolutePoint location="437,476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personnel.do,personnelModify,/personnel/personnel_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="896,154" />
+      <AbsolutePoint location="896,1076" />
+      <AbsolutePoint location="950,1076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/customer.do,customerQuery,/customer/customer.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="326,132" />
+      <AbsolutePoint location="453,132" />
+      <AbsolutePoint location="453,288" />
+      <AbsolutePoint location="650,288" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowDel,/borrow/borrow_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1471,154" />
+      <AbsolutePoint location="1471,265" />
+      <AbsolutePoint location="1951,265" />
+      <AbsolutePoint location="1951,1618" />
+      <AbsolutePoint location="1064,1618" />
+      <AbsolutePoint location="1064,1503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/customer.do,customerModify,/customer/customer_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="188,50" />
+      <AbsolutePoint location="188,-150" />
+      <AbsolutePoint location="1125,-150" />
+      <AbsolutePoint location="1125,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,equipmentDel,/equipment/equipment_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1509,554" />
+      <AbsolutePoint location="1509,1276" />
+      <AbsolutePoint location="1456,1276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,equipmentAdd,/equipment/equipment_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,488" />
+      <AbsolutePoint location="1223,488" />
+      <AbsolutePoint location="1223,1276" />
+      <AbsolutePoint location="1250,1276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personnel.do,personnelQueryModify,/personnel/personnel_modify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,72" />
+      <AbsolutePoint location="530,72" />
+      <AbsolutePoint location="530,1118" />
+      <AbsolutePoint location="161,1118" />
+      <AbsolutePoint location="161,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,equipmentModify,/equipment/equipment_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1532,502" />
+      <AbsolutePoint location="1891,502" />
+      <AbsolutePoint location="1891,1365" />
+      <AbsolutePoint location="1353,1365" />
+      <AbsolutePoint location="1353,1303" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/customer.do,customerDel,/customer/customer_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="218,50" />
+      <AbsolutePoint location="218,-210" />
+      <AbsolutePoint location="1765,-210" />
+      <AbsolutePoint location="1765,718" />
+      <AbsolutePoint location="1075,718" />
+      <AbsolutePoint location="1075,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/customer.do,customerAdd,/customer/customer_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,132" />
+      <AbsolutePoint location="-105,132" />
+      <AbsolutePoint location="-105,778" />
+      <AbsolutePoint location="1045,778" />
+      <AbsolutePoint location="1045,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personnel.do,personnelQuery,/personnel/personnel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="863,154" />
+      <AbsolutePoint location="863,1176" />
+      <AbsolutePoint location="828,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personnel.do,error,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,102" />
+      <AbsolutePoint location="393,102" />
+      <AbsolutePoint location="393,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personnel.do,personnelDel,/personnel/personnel_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="927,102" />
+      <AbsolutePoint location="1193,102" />
+      <AbsolutePoint location="1193,1076" />
+      <AbsolutePoint location="1148,1076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reverse.do,delReply,/message/reply_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1728,954" />
+      <AbsolutePoint location="1728,1276" />
+      <AbsolutePoint location="1713,1276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowQuery,/borrow/borrow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1513,72" />
+      <AbsolutePoint location="1921,72" />
+      <AbsolutePoint location="1921,1418" />
+      <AbsolutePoint location="1323,1418" />
+      <AbsolutePoint location="1323,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personnel.do,personnelAdd,/personnel/personnel_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="926,154" />
+      <AbsolutePoint location="926,999" />
+      <AbsolutePoint location="1049,999" />
+      <AbsolutePoint location="1049,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/borrow.do,borrowRestore,/borrow/borrow_ok.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1291,154" />
+      <AbsolutePoint location="1291,169" />
+      <AbsolutePoint location="-45,169" />
+      <AbsolutePoint location="-45,1418" />
+      <AbsolutePoint location="1034,1418" />
+      <AbsolutePoint location="1034,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
